@@ -11,7 +11,7 @@ describe('Exchange', () => {
     return { exchange }
   }
 
-  it('works', async () => {
+  it('sets the owner', async () => {
     const { exchange, wallet } = await loadFixture(exchangeFixture)
     expect(await exchange.owner()).to.eq(wallet.address)
   })
